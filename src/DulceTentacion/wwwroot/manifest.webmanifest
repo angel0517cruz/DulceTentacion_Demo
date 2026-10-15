@@ -1,0 +1,12 @@
+{
+  "name": "Dulce Tentación",
+  "short_name": "Dulce Tentación",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2b2a2e",
+  "theme_color": "#2b2a2e",
+  "lang": "es",
+  "icons": [
+    { "src": "/img/icono-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

@@ -1,0 +1,6 @@
+**/bin/
+**/obj/
+**/datos/
+.git/
+tests/
+*.md

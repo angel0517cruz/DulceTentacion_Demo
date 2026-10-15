@@ -1,0 +1,18 @@
+# Plano de Render (Blueprint): publica la versión de demostración de Dulce Tentación.
+# En Render: New > Blueprint > elegir este repositorio.
+# No necesita base de datos aparte: usa SQLite dentro del contenedor y carga datos de ejemplo al arrancar.
+services:
+  - type: web
+    name: dulce-tentacion-demo
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/salud
+    autoDeploy: true               # cada push a main vuelve a desplegar
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      # Modo demostración: PIN 1234 para todos y una semana de movimiento de ejemplo.
+      - key: Demo__Activo
+        value: "true"
